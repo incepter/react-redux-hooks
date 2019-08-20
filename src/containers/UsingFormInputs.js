@@ -1,14 +1,20 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import useLocalUserInputForm from "../_hooks/useLocalUserInputForm";
 
 export default function UsingFormInputs() {
+  const dispatch = useDispatch();
   const initialState = {
-    username: "some username",
+    username: "Sophia",
     password: "random",
     rememberMe: false
   };
   const submit = values => {
     console.log(values);
+    dispatch({
+      type: "SOME_ACTION",
+      payload: values
+    });
   };
   const {
     values,
