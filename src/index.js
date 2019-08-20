@@ -3,12 +3,12 @@ import ReactDOM from "react-dom";
 import ReduxApp from "./ReduxApp";
 
 import "./styles.css";
-import AppContainer from "./containers/AppContainer";
+import UsingFormInputs from "./containers/UsingFormInputs";
 
 function App() {
   return (
     <ReduxApp>
-      <AppContainer />
+      <UsingFormInputs />
     </ReduxApp>
   );
 }
