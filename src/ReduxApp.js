@@ -2,6 +2,7 @@ import React from "react";
 import produce from "immer";
 import { createStore, combineReducers } from "redux";
 import { Provider } from "react-redux";
+import { formsReducer } from "./_forms";
 
 const initialState = {
   app: {
@@ -20,7 +21,8 @@ function initStore() {
 
 function getReducers() {
   return combineReducers({
-    app: appReducer
+    app: appReducer,
+    forms: formsReducer
   });
 }
 
