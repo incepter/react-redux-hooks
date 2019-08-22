@@ -15,7 +15,7 @@ export default function UsingStoreForm({ onSubmit }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label for="username">Username: </label>
+      <label htmlFor="username">Username: </label>
       <input
         type="text"
         name="username"
@@ -23,7 +23,7 @@ export default function UsingStoreForm({ onSubmit }) {
         onChange={handleInputsChange}
       />
       <br />
-      <label for="password">Password: </label>
+      <label htmlFor="password">Password: </label>
       <input
         type="password"
         name="password"
@@ -31,7 +31,7 @@ export default function UsingStoreForm({ onSubmit }) {
         onChange={handleInputsChange}
       />
       <br />
-      <label for="rememberMe">Remember me </label>
+      <label htmlFor="rememberMe">Remember me </label>
       <input
         type="checkbox"
         name="rememberMe"
