@@ -16,12 +16,6 @@ export const BasicInput = ({ name, value, onChange, ...rest }) => (
     inputProps={{
       "data-testid": name
     }}
-    style={{
-      marginTop: "20px"
-    }}
-    InputProps={{
-      style: { height: "40px" }
-    }}
     fullWidth
     {...rest}
   />

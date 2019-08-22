@@ -11,13 +11,13 @@ function App() {
   return (
     <ReduxApp>
       <Grid container>
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={6}>
           <fieldset>
             <legend>Using store form</legend>
             <UsingStoreForm />
           </fieldset>
         </Grid>
-        <Grid>
+        <Grid item xs={12} sm={6}>
           <fieldset>
             <legend>Using Local user input form</legend>
             <UsingFormInputs />
