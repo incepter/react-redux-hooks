@@ -13,7 +13,7 @@ function App() {
       <Grid container>
         <Grid item xs={12} sm={6}>
           <fieldset>
-            <legend>Using store form</legend>
+            <legend>Using User input store form</legend>
             <UsingStoreForm />
           </fieldset>
         </Grid>

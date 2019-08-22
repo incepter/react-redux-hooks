@@ -7,13 +7,19 @@ export default function useUserInputStoreForm(formKey, submitHandler) {
     submitHandler
   );
 
-  const onChange = useCallback(({ target: { name, value } }) => {
-    handleChange(name, value);
-  }, []);
+  const onChange = useCallback(
+    ({ target: { name, value } }) => {
+      handleChange(name, value);
+    },
+    [handleChange]
+  );
 
-  const onCheckboxChange = useCallback(({ target: { name, checked } }) => {
-    handleChange(name, checked);
-  }, []);
+  const onCheckboxChange = useCallback(
+    ({ target: { name, checked } }) => {
+      handleChange(name, checked);
+    },
+    [handleChange]
+  );
 
   const handleSubmit = useCallback(formValues => onSubmit(formValues), [
     onSubmit

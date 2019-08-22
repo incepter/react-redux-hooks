@@ -1,17 +1,13 @@
 import React from "react";
-import useStoreForm from "../_hooks/useStoreForm";
+import useUserInputStoreForm from "../_hooks/useUserInputStoreForm";
 
 export default function UsingStoreForm({ onSubmit }) {
-  const { values, handleChange, handleSubmit } = useStoreForm(
-    "LOGIN_FORM",
-    onSubmit
-  );
-  const handleInputsChange = ({ target: { name, value } }) => {
-    handleChange(name, value);
-  };
-  const handleCheckboxesChange = ({ target: { name, checked } }) => {
-    handleChange(name, checked);
-  };
+  const {
+    values,
+    onChange: handleInputsChange,
+    onCheckboxChange: handleCheckboxesChange,
+    onSubmit: handleSubmit
+  } = useUserInputStoreForm("LOGIN_FORM", onSubmit);
 
   return (
     <form onSubmit={handleSubmit}>
